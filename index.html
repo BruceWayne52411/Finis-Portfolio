@@ -2,28 +2,220 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fira+Code:wght@400;600&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>My Website</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+  <div class="wrap">
+    <header class="hero">
+      <h1>
+        <span class="writer">Fini White</span>
+        /
+        <span class="coder">Hannah Graham</span>
+      </h1>
+      <p class="tagline">Inspiring Writer and Coder</p>
     </header>
-    <div class="container">
-        <h2>Welcome to my website</h2>
-        <p>This is a simple website layout using HTML and CSS.</p>
-    </div>
+
+
+    <section class="card">
+      <h2>Personal Info</h2>
+      <p>Introduce yourself here.</p>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <p>List your current or past projects here.</p>
+
+      <!-- Project 1 — open by default -->
+      <details class="accordion">
+        <summary>
+          <span>Name of Project #1</span>
+          <small class="subtle">(Date started – Date ended)</small>
+        </summary>
+
+        <ul>
+          <li>Details or accomplishments related to the project.
+            <ul>
+              <li>Sub-detail or accomplishment 1</li>
+              <li>Sub-detail or accomplishment 2</li>
+              <li>Sub-detail or accomplishment 3</li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Carousel -->
+        <div class="carousel" aria-label="Project screenshots" data-start="0">
+          <button class="nav prev" aria-label="Previous screenshot">❮</button>
+          <div class="slides" role="group" aria-roledescription="carousel">
+            <!-- Replace with your real images in /assets -->
+            <img src="assets/project1/screenshot1.png" alt="Screenshot 1" class="active">
+            <img src="assets/project1/screenshot2.png" alt="Screenshot 2">
+            <img src="assets/project1/screenshot3.png" alt="Screenshot 3">
+          </div>
+          <button class="nav next" aria-label="Next screenshot">❯</button>
+          <div class="dots" aria-label="Slide indicators"></div>
+        </div>
+      </details>
+
+      <!-- Project 2 — closed by default -->
+      <details class="accordion">
+        <summary>
+          <span>Name of Project #2</span>
+          <small class="subtle">(Date started – Date ended)</small>
+        </summary>
+        <ul>
+          <li>Details or accomplishments related to the project.
+            <ul>
+              <li>Sub-detail or accomplishment 1</li>
+              <li>Sub-detail or accomplishment 2</li>
+              <li>Sub-detail or accomplishment 3</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Carousel -->
+        <div class="carousel" aria-label="Project screenshots" data-start="0">
+          <button class="nav prev" aria-label="Previous screenshot">❮</button>
+          <div class="slides" role="group" aria-roledescription="carousel">
+            <!-- Replace with your real images in /assets -->
+            <img src="assets/project2/screenshot1.png" alt="Screenshot 1" class="active">
+            <img src="assets/project2/screenshot2.png" alt="Screenshot 2">
+            <img src="assets/project2/screenshot3.png" alt="Screenshot 3">
+          </div>
+          <button class="nav next" aria-label="Next screenshot">❯</button>
+          <div class="dots" aria-label="Slide indicators"></div>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>
+          <span>Name of Project #3</span>
+          <small class="subtle">(Date started – Date ended)</small>
+        </summary>
+        <ul>
+          <li>Details or accomplishments related to the project.
+            <ul>
+              <li>Sub-detail or accomplishment 1</li>
+              <li>Sub-detail or accomplishment 2</li>
+              <li>Sub-detail or accomplishment 3</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Carousel -->
+        <div class="carousel" aria-label="Project screenshots" data-start="0">
+          <button class="nav prev" aria-label="Previous screenshot">❮</button>
+          <div class="slides" role="group" aria-roledescription="carousel">
+            <!-- Replace with your real images in /assets -->
+            <img src="assets/project3/screenshot1.png" alt="Screenshot 1" class="active">
+            <img src="assets/project3/screenshot2.png" alt="Screenshot 2">
+            <img src="assets/project3/screenshot3.png" alt="Screenshot 3">
+          </div>
+          <button class="nav next" aria-label="Next screenshot">❯</button>
+          <div class="dots" aria-label="Slide indicators"></div>
+        </div>
+      </details>
+      <details class="accordion">
+        <summary>
+          <span>Name of Project #4</span>
+          <small class="subtle">(Date started – Date ended)</small>
+        </summary>
+        <ul>
+          <li>Details or accomplishments related to the project.
+            <ul>
+              <li>Sub-detail or accomplishment 1</li>
+              <li>Sub-detail or accomplishment 2</li>
+              <li>Sub-detail or accomplishment 3</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Carousel -->
+        <div class="carousel" aria-label="Project screenshots" data-start="0">
+          <button class="nav prev" aria-label="Previous screenshot">❮</button>
+          <div class="slides" role="group" aria-roledescription="carousel">
+            <!-- Replace with your real images in /assets -->
+            <img src="assets/project4/screenshot1.png" alt="Screenshot 1" class="active">
+            <img src="assets/project4/screenshot2.png" alt="Screenshot 2">
+            <img src="assets/project4/screenshot3.png" alt="Screenshot 3">
+          </div>
+          <button class="nav next" aria-label="Next screenshot">❯</button>
+          <div class="dots" aria-label="Slide indicators"></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Skills</h2>
+      <p>List your skills here.</p>
+    </section>
+
+    <section class="card">
+      <h2>Job Experience</h2>
+      <p>List your work experience here.</p>
+    </section>
+
+    <section class="card">
+      <h2>Hobbies</h2>
+      <p>Share your hobbies here.</p>
+    </section>
+
     <footer>
-        <p>&copy; 2023 My Website</p>
+      <p>© <span id="year"></span> Fini White/Hannah Graham Portfolio</p>
     </footer>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple carousel initializer (supports buttons, dots, keyboard, swipe)
+    document.querySelectorAll(".carousel").forEach((carousel) => {
+      const imgs = [...carousel.querySelectorAll(".slides img")];
+      const dotsWrap = carousel.querySelector(".dots");
+      let i = Number(carousel.dataset.start || 0);
+
+      // Build dots
+      imgs.forEach((_, idx) => {
+        const b = document.createElement("button");
+        b.className = "dot";
+        b.setAttribute("aria-label", "Go to slide " + (idx + 1));
+        b.addEventListener("click", () => show(idx));
+        dotsWrap.appendChild(b);
+      });
+
+      const prev = carousel.querySelector(".prev");
+      const next = carousel.querySelector(".next");
+      prev.addEventListener("click", () => show((i - 1 + imgs.length) % imgs.length));
+      next.addEventListener("click", () => show((i + 1) % imgs.length));
+
+      // Keyboard (when focused)
+      carousel.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") { prev.click(); }
+        if (e.key === "ArrowRight") { next.click(); }
+      });
+      carousel.tabIndex = 0; // make focusable
+
+      // Touch swipe
+      let startX = 0;
+      carousel.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+      carousel.addEventListener("touchend", (e) => {
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 30) { (dx > 0 ? prev : next).click(); }
+      }, { passive: true });
+
+      function show(idx) {
+        i = idx;
+        imgs.forEach((img, j) => img.classList.toggle("active", j === i));
+        [...dotsWrap.children].forEach((d, j) => d.classList.toggle("active", j === i));
+      }
+      show(i);
+    });
+  </script>
 </body>
 
 </html>

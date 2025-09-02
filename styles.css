@@ -1,43 +1,248 @@
+:root {
+  --bg1: #120028;
+  --bg2: #1b0033;
+  --accent: #a855f7;
+  --card-bg: rgba(30, 0, 60, 0.7);
+  --text: #f0e9ff;
+  --muted: #c3b5e8;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  min-height: 100vh;
+  color: var(--text);
+  line-height: 1.6;
+
+  background:
+    /* stars with glow */
+    radial-gradient(circle at 15% 15%, white 0%, rgba(255, 255, 255, 0.2) 8%, transparent 12%),
+    radial-gradient(circle at 40% 5%, white 0%, rgba(255, 255, 255, 0.25) 5%, transparent 10%),
+    radial-gradient(circle at 70% 20%, white 0%, rgba(255, 255, 255, 0.2) 3%, transparent 6%),
+    radial-gradient(circle at 85% 60%, white 0%, rgba(255, 255, 255, 0.25) 2%, transparent 9%),
+    radial-gradient(circle at 25% 85%, white 0%, rgba(255, 255, 255, 0.25) 3%, transparent 6%),
+    radial-gradient(circle at 12% 45%, white 0%, rgba(255, 255, 255, 0.25) 4%, transparent 8%),
+    radial-gradient(circle at 55% 32%, white 0%, rgba(255, 255, 255, 0.2) 6%, transparent 11%),
+    radial-gradient(circle at 78% 12%, white 0%, rgba(255, 255, 255, 0.3) 5%, transparent 9%),
+    radial-gradient(circle at 92% 48%, white 0%, rgba(255, 255, 255, 0.2) 7%, transparent 13%),
+    radial-gradient(circle at 76% 73%, white 0%, rgba(255, 255, 255, 0.25) 6%, transparent 12%),
+    radial-gradient(circle at 5% 90%, white 0%, rgba(255, 255, 255, 0.2) 5%, transparent 9%),
+    radial-gradient(circle at 95% 10%, white 0%, rgba(255, 255, 255, 0.3) 4%, transparent 8%),
+
+    /* add as many as you like above... */
+
+    /* galaxy gradient at back */
+    radial-gradient(circle at top, var(--bg2), var(--bg1));
+
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+
+
+.wrap {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
 }
 
-h1 {
-    margin: 0;
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-nav {
-    margin: 20px 0;
+.writer {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  margin-right: 6px;
+  color: var(--accent);
+  /* purple fill */
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  /* creates white outline */
 }
 
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
+
+/* Coder style */
+.coder {
+  font-family: 'Fira Code', monospace;
+  /* programmer-friendly font */
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text);
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 purple,
+    -1px 1px 0 black,
+    1px 1px 0 purple;
+  /* creates white outline */
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.hero .tagline {
+  color: var(lightgray);
+  font-size: 1.1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  background: #1e003c;
+}
+
+.card h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
 }
 
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* --- Accordion styling --- */
+.accordion {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 12px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.accordion>summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 14px 16px;
+  font-weight: 700;
+}
+
+.accordion>summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion>summary::after {
+  content: "▸";
+  color: var(--muted);
+  font-weight: 800;
+  transition: transform .18s ease, color .18s ease;
+}
+
+.accordion[open]>summary::after {
+  transform: rotate(90deg);
+  color: var(--accent);
+}
+
+.accordion .subtle {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.accordion ul {
+  margin: 10px 0 14px 22px;
+}
+
+/* --- Carousel --- */
+.carousel {
+  position: relative;
+  margin: 14px 0 4px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.carousel .slides {
+  position: relative;
+}
+
+.carousel .slides img {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.carousel .slides img.active {
+  display: block;
+}
+
+/* nav buttons */
+.carousel .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(20, 20, 30, .55);
+  border: 1px solid rgba(255, 255, 255, .15);
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+/* dots */
+.carousel .dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0 12px;
+}
+
+.carousel .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .4);
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel .dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* small screens */
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .accordion>summary {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
 }
